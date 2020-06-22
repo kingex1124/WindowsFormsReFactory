@@ -1,0 +1,10 @@
+﻿################################################################################
+# 這個 .gitignore 檔案由 Microsoft(R) Visual Studio 自動建立。
+################################################################################
+
+/.vs/WindowsFormsReFactory/v16
+/packages
+/WindowsFormsReFactory/bin/Debug
+/WindowsFormsReFactory/obj/Debug
+/WindowsFormsReFactoryTests/bin/Debug
+/WindowsFormsReFactoryTests/obj/Debug
