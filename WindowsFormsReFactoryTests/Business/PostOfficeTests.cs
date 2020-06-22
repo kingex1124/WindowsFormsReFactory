@@ -12,6 +12,26 @@ namespace WindowsFormsReFactory.Business.Tests
     [TestClass()]
     public class PostOfficeTests
     {
+        /// <summary>
+        ///GetILogistics 的測試
+        ///</summary>
+        [TestMethod()]
+        public void GetILogisticsTest_Get郵局()
+        {
+            //arrange
+            string p = "3";
+            Product product = new Product();
+            ILogistics expected = new PostOffice();
+
+            ILogistics actual;
+
+            //act
+            actual = FactoryRepository.GetILogistics(p, product);
+
+            //assert
+            Assert.AreEqual(expected.GetType(), actual.GetType());
+        }
+
         [TestMethod()]
         public void PostOfficeTest()
         {

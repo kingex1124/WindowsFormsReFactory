@@ -12,6 +12,26 @@ namespace WindowsFormsReFactory.Business.Tests
     [TestClass()]
     public class BlackCatTests
     {
+        /// <summary>
+        ///GetILogistics 的測試
+        ///</summary>
+        [TestMethod()]
+        public void GetILogisticsTest_GetBlackCat()
+        {
+            //arrange
+            string p = "1";
+            Product product = new Product();
+            ILogistics expected = new BlackCat();
+
+            ILogistics actual;
+
+            //act
+            actual = FactoryRepository.GetILogistics(p, product);
+
+            //assert
+            Assert.AreEqual(expected.GetType(), actual.GetType());
+        }
+
         [TestMethod()]
         public void BlackCatTest()
         {

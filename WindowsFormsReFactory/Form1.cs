@@ -83,7 +83,10 @@ namespace WindowsFormsReFactory
             //    fee = logistics.GetsFee();
             //}
 
-            ILogistics logistics = this.GetILogistics(this.drpCompany.SelectedValue.ToString(), product);
+            //ILogistics logistics = this.GetILogistics(this.drpCompany.SelectedValue.ToString(), product);
+
+            ILogistics logistics = FactoryRepository.GetILogistics(this.drpCompany.SelectedValue.ToString(), product);
+
             if (logistics != null)
             {
                 logistics.Calculate();

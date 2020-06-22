@@ -12,6 +12,26 @@ namespace WindowsFormsReFactory.Business.Tests
     [TestClass()]
     public class HsinchuTests
     {
+        /// <summary>
+        ///GetILogistics 的測試
+        ///</summary>
+        [TestMethod()]
+        public void GetILogisticsTest_Get新竹貨運()
+        {
+            //arrange
+            string p = "2";
+            Product product = new Product();
+            ILogistics expected = new Hsinchu();
+
+            ILogistics actual;
+
+            //act
+            actual = FactoryRepository.GetILogistics(p, product);
+
+            //assert
+            Assert.AreEqual(expected.GetType(), actual.GetType());
+        }
+
         [TestMethod()]
         public void HsinchuTest()
         {
